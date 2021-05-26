@@ -1,0 +1,26 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "cr-firework-rocket-duration:item/firework_rocket_flight_1"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"cr-firework-rocket-duration:flight": 1
+			},
+			"model": "cr-firework-rocket-duration:item/firework_rocket_flight_1"
+		},
+		{
+			"predicate": {
+				"cr-firework-rocket-duration:flight": 2
+			},
+			"model": "cr-firework-rocket-duration:item/firework_rocket_flight_2"
+		},
+		{
+			"predicate": {
+				"cr-firework-rocket-duration:flight": 3
+			},
+			"model": "cr-firework-rocket-duration:item/firework_rocket_flight_3"
+		}
+	]
+}

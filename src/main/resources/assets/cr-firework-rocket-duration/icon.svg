@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g fill-rule="evenodd">
+  <rect width="64" height="64" fill="#606060" style="paint-order:stroke fill markers"/>
+  <g stroke-linecap="round" stroke-linejoin="round" stroke-width="34.492">
+   <path d="m34 32v4h-4v4h-4v8h4v-4h4v-4h4v-8z" fill="#fff" style="paint-order:fill markers stroke"/>
+   <path d="m34 24v4h-4v4h-4v8h4v-4h4v-4h4v-8z" fill="#aaa" style="paint-order:fill markers stroke"/>
+   <path d="m34 40v4h-4v4h-4v8h4v-4h4v-4h4v-8z" fill="#aaa" style="paint-order:fill markers stroke"/>
+  </g>
+  <path d="m34 24h-8v8h4v-4h4z" fill="#fff"/>
+  <path d="m30 56h8v-8h-4v4h-4z" fill="#fff"/>
+  <path d="m22 24v-8h4v-4h4v-4h4v4h4v4h4v8z" fill="#aaa"/>
+  <path d="m46 48v4h8v-4zm0 4h-4v4h4zm-4 4h-8v4h8zm-8 0v-4h-4v4z" fill="#777" style="paint-order:fill markers stroke"/>
+ </g>
+</svg>

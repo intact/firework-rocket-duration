@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "cr-firework-rocket-duration:item/firework_rocket_flight_3"
+	}
+}

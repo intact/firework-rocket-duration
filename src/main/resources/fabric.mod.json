@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "cr-firework-rocket-duration",
+	"version": "${version}",
+	"name": "Firework Rocket Duration",
+	"description": "Change the sprite of the firework rocket depending on flight duration",
+	"authors": [
+		"chrono"
+	],
+	"contact": {
+		"sources": ""
+	},
+	"license": "GPL-3",
+	"icon": "assets/cr-firework-rocket-duration/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"chrono.mods.firework.FireworkRocketDuration"
+		]
+	},
+	"mixins": [
+	],
+	"depends": {
+		"minecraft": "1.16.x",
+		"fabricloader": ">=0.11.0",
+		"fabric-api-base": ">=0.2.1",
+		"fabric-object-builder-api-v1": ">=1.9.4",
+		"fabric-resource-loader-v0": ">=0.4.2",
+		"fabric-tag-extensions-v0": ">=1.1.1",
+		"fabric-tool-attribute-api-v1": ">=1.2.6"
+	}
+}
