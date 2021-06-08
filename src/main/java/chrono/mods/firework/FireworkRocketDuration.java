@@ -16,7 +16,7 @@ public class FireworkRocketDuration implements ClientModInitializer {
 				(stack, world, entity) -> {
 					CompoundTag tags = stack.getSubTag("Fireworks");
 					int flight = tags != null && tags.contains("Flight", 99) ? tags.getByte("Flight") : 1;
-					return Math.min(Math.max(flight, 1), 3);
+					return Math.min(Math.max(flight - 1, 0), 2) / 2.0F;
 				});
 	}
 }
