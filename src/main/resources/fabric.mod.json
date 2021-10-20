@@ -10,7 +10,7 @@
 	"contact": {
 		"sources": ""
 	},
-	"license": "GPL-3",
+	"license": "GPL-3+",
 	"icon": "assets/cr-firework-rocket-duration/icon.png",
 	"environment": "*",
 	"entrypoints": {
