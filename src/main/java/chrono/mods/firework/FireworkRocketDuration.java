@@ -18,8 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package chrono.mods.firework;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
 
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
@@ -29,7 +29,7 @@ public class FireworkRocketDuration implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		FabricModelPredicateProviderRegistry.register(Items.FIREWORK_ROCKET, new ResourceLocation(MODID, "flight"),
+		ItemProperties.register(Items.FIREWORK_ROCKET, new ResourceLocation(MODID, "flight"),
 				(stack, world, entity, seed) -> {
 					CompoundTag tags = stack.getTagElement("Fireworks");
 					int flight = tags != null && tags.contains("Flight", 99) ? tags.getByte("Flight") : 1;
