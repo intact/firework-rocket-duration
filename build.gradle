@@ -3,10 +3,6 @@ plugins {
 	id "maven-publish"
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
-
-archivesBaseName = "${project.archives_base_name}-fabric"
 version = "${project.mod_version}+${project.minecraft_version}"
 group = project.maven_group
 
@@ -17,13 +13,17 @@ dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft("com.mojang:minecraft:${project.minecraft_version}")
 	mappings(loom.officialMojangMappings())
-	modApi("net.fabricmc:fabric-loader:${project.loader_version}")
+	modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
 
 	modImplementation(fabricApi.module("fabric-transitive-access-wideners-v1", project.fabric_api_version));
 	modRuntimeOnly(fabricApi.module("fabric-resource-loader-v0", project.fabric_api_version));
 	include(fabricApi.module("fabric-api-base", project.fabric_api_version));
 	include(fabricApi.module("fabric-resource-loader-v0", project.fabric_api_version));
 	include(fabricApi.module("fabric-transitive-access-wideners-v1", project.fabric_api_version));
+}
+
+base {
+	archivesBaseName = "${project.archives_base_name}-fabric"
 }
 
 processResources {
@@ -51,6 +51,9 @@ java {
 	// if it is present.
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
+
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
 }
 
 jar {
