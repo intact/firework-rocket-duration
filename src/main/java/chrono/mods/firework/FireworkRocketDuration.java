@@ -20,9 +20,10 @@ package chrono.mods.firework;
 import net.fabricmc.api.ClientModInitializer;
 
 import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.Fireworks;
 
 public class FireworkRocketDuration implements ClientModInitializer {
 	public static String MODID = "cr-firework-rocket-duration";
@@ -31,8 +32,8 @@ public class FireworkRocketDuration implements ClientModInitializer {
 	public void onInitializeClient() {
 		ItemProperties.register(Items.FIREWORK_ROCKET, new ResourceLocation(MODID, "flight"),
 				(stack, world, entity, seed) -> {
-					CompoundTag tags = stack.getTagElement("Fireworks");
-					int flight = tags != null && tags.contains("Flight", 99) ? tags.getByte("Flight") : 1;
+					Fireworks fireworks = stack.get(DataComponents.FIREWORKS);
+					int flight = fireworks != null ? fireworks.flightDuration() : 1;
 					return Math.min(Math.max(flight - 1, 0), 2) / 2.0F;
 				});
 	}
