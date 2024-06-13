@@ -30,7 +30,7 @@ public class FireworkRocketDuration implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		ItemProperties.register(Items.FIREWORK_ROCKET, new ResourceLocation(MODID, "flight"),
+		ItemProperties.register(Items.FIREWORK_ROCKET, ResourceLocation.fromNamespaceAndPath(MODID, "flight"),
 				(stack, world, entity, seed) -> {
 					Fireworks fireworks = stack.get(DataComponents.FIREWORKS);
 					int flight = fireworks != null ? fireworks.flightDuration() : 1;
